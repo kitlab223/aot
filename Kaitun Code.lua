@@ -9,8 +9,8 @@ _G.Settings = {
     ["Serum Titan"] = {
         ["Start Raid When Level"] = 103,
         ["Raid"] = {"Trost", -- ไททันเอเรน
-        "Stohess", -- ไททันเกราะ
-        "Shiganshina" -- ไททันแอนนี่
+        "Trost", -- ไททันเกราะ
+        "Trost" -- ไททันแอนนี่
         },
         ['Buy Boost Gem Lock'] = 40000,
         ['Webhook'] = '',

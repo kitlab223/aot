@@ -50,7 +50,7 @@ _G.Settings = {
     ["White Screen"] = true -- จอขาวลด RAM
 }
 local time_check = tick()
-while wait(10) do
+while wait() do
     local suc, err = pcall(function()
         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f5d1ba78a67ec3ef1113800438b8a285.lua"))()
     end)
@@ -64,6 +64,7 @@ while wait(10) do
         TeleportService:Teleport(17850641257, LocalPlayer)
         wait(10)
     end
+    wait(10)
     if suc and not err then
         time_check = nil
         break

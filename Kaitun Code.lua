@@ -7,16 +7,16 @@ _G.Settings = {
     ['Auto Farm Thunder Spear'] = true,
     -- Serum
     ["Serum Titan"] = {
-        ["Start Raid When Level"] = 103,
+        ["Start Raid When Level"] = 999,
         ["Raid"] = {"Trost", -- ไททันเอเรน
-        "Stohess", -- ไททันเกราะ
-        "Shiganshina" -- ไททันแอนนี่
+        "Trost", -- ไททันเกราะ
+        "Trost" -- ไททันแอนนี่
         },
         ['Buy Boost Gem Lock'] = 40000,
         ['Webhook'] = '',
         ["Enabled"] = true
     },
-    ["Max Level (Prestige)"] = 999, -- AOT 2
+    ["Max Level (Prestige)"] = 110, -- AOT 2
     -- รีเบิด
     ["Prestige"] = {
         ["Memories"] = { -- ใส่ชื่อการ์ดที่ต้องการ (โอกาสได้99%)
@@ -46,7 +46,7 @@ _G.Settings = {
     ["Auto Fill Gas"] = true, -- เติมแก๊ส + เติมดาบ
     -- เพิ่มความลื่น
     ["FPS Booster"] = true, -- ภาพกาก
-    ["Close Gui"] = true, -- ปิดหน้า GUI
+    ["Close Gui"] = false, -- ปิดหน้า GUI
     ["White Screen"] = true -- จอขาวลด RAM
 }
 local time_check = tick()

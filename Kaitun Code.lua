@@ -11,7 +11,7 @@ _G.Settings = {
     ['Auto Farm Thunder Spear'] = true,
     -- Serum
     ["Serum Titan"] = {
-        ["Start Raid When Level"] = 999,
+        ["Start Raid When Level"] = 103,
         ["Raid"] = {"Trost", -- ไททันเอเรน
         "Trost", -- ไททันเกราะ
         "Trost" -- ไททันแอนนี่
@@ -53,23 +53,17 @@ _G.Settings = {
     ["Close Gui"] = false, -- ปิดหน้า GUI
     ["White Screen"] = true -- จอขาวลด RAM
 }
-local time_check = tick()
-while wait() do
-    local suc, err = pcall(function()
-        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f5d1ba78a67ec3ef1113800438b8a285.lua"))()
+while not stop_loop do
+    wait(1)
+    pcall(function()
+        if game.Players.LocalPlayer.PlayerGui:FindFirstChild("SwitchHub") then
+            stop_loop = true
+        else
+            spawn(function()
+                loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f5d1ba78a67ec3ef1113800438b8a285.lua"))()
+            end)
+            wait(13)
+        end
     end)
-    if not suc then
-        warn("== Load Error ==", err)
-    else
-        break -- สำเร็จ, ออกจาก loop
-    end
-    if tick() - time_check >= 60 then
-        local Players = game:GetService("Players")
-        local TeleportService = game:GetService("TeleportService")
-        local LocalPlayer = Players.LocalPlayer
-        TeleportService:Teleport(17850641257, LocalPlayer)
-        wait(10)
-    end
-    wait(5)
-    print('sss')
+    print('nub')
 end

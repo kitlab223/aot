@@ -62,7 +62,7 @@ while not stop_loop do
             spawn(function()
                 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f5d1ba78a67ec3ef1113800438b8a285.lua"))()
             end)
-            wait(40)
+            wait(60)
         end
     end)
     print('nub')

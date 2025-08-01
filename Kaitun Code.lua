@@ -4,6 +4,10 @@ if not game:IsLoaded() then
     until game:IsLoaded()
 end
 _G.Settings = {
+    ['Buy Luck Booster When'] = {
+        ['Prestige'] = 'AOT 2',
+        ['Level'] = 103
+    },
     ['Auto Farm Thunder Spear'] = true,
     -- Serum
     ["Serum Titan"] = {

@@ -18,9 +18,9 @@ _G.Settings = {
         },
         ['Buy Boost Gem Lock'] = 40000,
         ['Webhook'] = '',
-        ["Enabled"] = false
+        ["Enabled"] = true
     },
-    ["Max Level (Prestige)"] = 200, -- AOT 2
+    ["Max Level (Prestige)"] = 110, -- AOT 2
     -- รีเบิด
     ["Prestige"] = {
         ["Memories"] = { -- ใส่ชื่อการ์ดที่ต้องการ (โอกาสได้99%)
@@ -62,7 +62,7 @@ while not stop_loop do
             spawn(function()
                 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f5d1ba78a67ec3ef1113800438b8a285.lua"))()
             end)
-            wait(13)
+            wait(35)
         end
     end)
     print('nub')

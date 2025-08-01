@@ -9,14 +9,14 @@ _G.Settings = {
     ["Serum Titan"] = {
         ["Start Raid When Level"] = 103,
         ["Raid"] = {"Trost", -- ไททันเอเรน
-        "Trost", -- ไททันเกราะ
-        "Trost" -- ไททันแอนนี่
+        "Stohess", -- ไททันเกราะ
+        "Shiganshina" -- ไททันแอนนี่
         },
         ['Buy Boost Gem Lock'] = 40000,
         ['Webhook'] = '',
         ["Enabled"] = true
     },
-    ["Max Level (Prestige)"] = 110, -- AOT 2
+    ["Max Level (Prestige)"] = 999, -- AOT 2
     -- รีเบิด
     ["Prestige"] = {
         ["Memories"] = { -- ใส่ชื่อการ์ดที่ต้องการ (โอกาสได้99%)
@@ -54,8 +54,10 @@ while wait() do
     local suc, err = pcall(function()
         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f5d1ba78a67ec3ef1113800438b8a285.lua"))()
     end)
-    if err then
-        warn('==================== ', err)
+    if not suc then
+        warn("== Load Error ==", err)
+    else
+        break -- สำเร็จ, ออกจาก loop
     end
     if tick() - time_check >= 60 then
         local Players = game:GetService("Players")
@@ -64,9 +66,6 @@ while wait() do
         TeleportService:Teleport(17850641257, LocalPlayer)
         wait(10)
     end
-    wait(10)
-    if suc and not err then
-        time_check = nil
-        break
-    end
+    wait(5)
+    print('sss')
 end

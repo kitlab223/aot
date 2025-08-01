@@ -18,9 +18,9 @@ _G.Settings = {
         },
         ['Buy Boost Gem Lock'] = 40000,
         ['Webhook'] = '',
-        ["Enabled"] = true
+        ["Enabled"] = false
     },
-    ["Max Level (Prestige)"] = 110, -- AOT 2
+    ["Max Level (Prestige)"] = 200, -- AOT 2
     -- รีเบิด
     ["Prestige"] = {
         ["Memories"] = { -- ใส่ชื่อการ์ดที่ต้องการ (โอกาสได้99%)

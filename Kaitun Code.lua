@@ -39,7 +39,7 @@ _G.Settings = {
     ["Mission"] = {
         ["Auto Join Mission (Boost)"] = true, -- เข้าด่านที่มีบูส เพื่อให้ได้ EXP +50%
         ["Auto Next Difficulty"] = true, -- ไปด่านต่อไปเมื่อแรงค์ถึง
-        ["Auto Leave (When Win)"] = 7 -- ออกจากด่านเมื่อชนะครบ 2รอบ
+        ["Auto Leave (When Win)"] = 4 -- ออกจากด่านเมื่อชนะครบ 2รอบ
     },
     -- อัพแรงค์
     ["Upgrades"] = {"ODM_Damage", "Blade_Durability", "Crit_Chance", "Crit_Chance", "Crit_Damage", "ODM_Control",
@@ -3203,3 +3203,4 @@ else -- Farm Titan
         end
     end)
 end
+

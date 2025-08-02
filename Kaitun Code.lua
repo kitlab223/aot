@@ -1885,22 +1885,30 @@ if not game:IsLoaded() then
                     end
                 until not workspace.Objects.Blackout.Memories:FindFirstChild('Luck Boost')
                 wait(1)
-                local list_mem = { -- S-Tier
-                "Quakestrike", "Stalwart", "Resilience", "Vengeflare", "Flashstep", "Vitalize", -- A-Tier
-                "Fury Forge", "Crescendo", "Blitzblade", "Aegisurge", "Guardian", "Omnirage", -- B-Tier
-                "Swiftshot", "Lifefeed", "Mendmaster", -- C-Tier
-                "Deflectra", "Cooldown Blitz"}
-                for i, v in ipairs(list_mem) do
-                    local args = {
-                        [1] = "S_Equipment",
-                        [2] = "Prestige",
-                        [3] = {
-                            ["Talents"] = v,
-                            ["Boosts"] = "Luck Boost"
-                        }
-                    }
-                    game:GetService("ReplicatedStorage").Assets.Remotes.GET:InvokeServer(unpack(args))
-                end
+                -- local list_mem = { -- S-Tier
+                -- "Quakestrike", "Stalwart", "Resilience", "Vengeflare", "Flashstep", "Vitalize", -- A-Tier
+                -- "Fury Forge", "Crescendo", "Blitzblade", "Aegisurge", "Guardian", "Omnirage", -- B-Tier
+                -- "Swiftshot", "Lifefeed", "Mendmaster", -- C-Tier
+                -- "Deflectra", "Cooldown Blitz"}
+                local loop_job = false
+                repeat
+                    wait(0.1)
+                    for i,v in pairs(workspace.Objects.Blackout.Memories:GetChildren()) do
+                        if v:IsA('Part') then
+                            local args = {
+                                [1] = "S_Equipment",
+                                [2] = "Prestige",
+                                [3] = {
+                                    ["Talents"] = v.Name,
+                                    ["Boosts"] = "Luck Boost"
+                                }
+                            }
+                            game:GetService("ReplicatedStorage").Assets.Remotes.GET:InvokeServer(unpack(args))
+                            loop_job = true
+                            break
+                        end
+                    end
+                until loop_job 
                 wait(0.5)
                 game:GetService("TeleportService"):Teleport(14916516914)
                 wait(10)

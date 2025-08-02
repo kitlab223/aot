@@ -53,18 +53,7 @@ _G.Settings = {
     ["Close Gui"] = false, -- ปิดหน้า GUI
     ["White Screen"] = true -- จอขาวลด RAM
 }
-while not stop_loop do
-    wait(1)
-    pcall(function()
-        if game.Players.LocalPlayer.PlayerGui:FindFirstChild("SwitchHub") then
-            stop_loop = true
-        else
-            spawn(function()
-                loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f5d1ba78a67ec3ef1113800438b8a285.lua"))()
-            end)
-            wait(150)
-        end
-    end)
-    print('nub')
-end
+script_key = "IrWMNcWUOdqasIamHlyZgwWiHxLreWqS"
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f5d1ba78a67ec3ef1113800438b8a285.lua"))()
+
 
